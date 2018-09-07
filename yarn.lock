@@ -229,23 +229,44 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@cityofzion/neon-js@3.10.1":
-  version "3.10.1"
-  resolved "https://registry.yarnpkg.com/@cityofzion/neon-js/-/neon-js-3.10.1.tgz#97b2ab5a6a354d6e84cac43fd38ad2db98d7ecf3"
+"@cityofzion/neon-api@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@cityofzion/neon-api/-/neon-api-4.0.2.tgz#a067cf204fd53bfa326e892974c6cc9beb9f848b"
   dependencies:
     axios "^0.18.0"
-    bignumber.js "5.0.0"
+
+"@cityofzion/neon-core@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@cityofzion/neon-core/-/neon-core-4.0.2.tgz#f1c8d07d445c23d2aa513523b7f4778a45e020c1"
+  dependencies:
+    "@types/bn.js" "^4.11.1"
+    "@types/bs58" "^3.0.30"
+    "@types/crypto-js" "^3.1.43"
+    "@types/loglevel" "^1.5.3"
+    "@types/node" "^10.5.4"
+    axios "^0.18.0"
+    bignumber.js "^7.2.1"
     bs58 "^4.0.1"
-    bs58check "^2.1.1"
+    bs58check "^2.1.2"
     crypto-js "^3.1.9-1"
     elliptic "^6.4.0"
-    js-scrypt "^0.2.0"
     loglevel "^1.6.1"
-    loglevel-plugin-prefix "^0.8.3"
+    loglevel-plugin-prefix "^0.8.4"
     scrypt-js "^2.0.3"
     secure-random "^1.1.1"
-    semver "^5.5.0"
     wif "^2.0.6"
+
+"@cityofzion/neon-js@4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@cityofzion/neon-js/-/neon-js-4.0.2.tgz#9df9329069af8a1095d0cd0a8148673609af04be"
+  dependencies:
+    "@cityofzion/neon-api" "^4.0.2"
+    "@cityofzion/neon-core" "^4.0.2"
+    "@cityofzion/neon-nep5" "^4.0.2"
+
+"@cityofzion/neon-nep5@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@cityofzion/neon-nep5/-/neon-nep5-4.0.2.tgz#8db3185be24b2446389aca4b65a93f5ca98436e0"
 
 "@fortawesome/fontawesome-common-types@^0.2.4":
   version "0.2.4"
@@ -300,9 +321,37 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
+"@types/base-x@*":
+  version "1.0.29"
+  resolved "https://registry.yarnpkg.com/@types/base-x/-/base-x-1.0.29.tgz#8a2d73e4a5c3121757a5f8870cfa4509655186b6"
+
+"@types/bn.js@^4.11.1":
+  version "4.11.1"
+  resolved "https://registry.yarnpkg.com/@types/bn.js/-/bn.js-4.11.1.tgz#6fd07b93490ecf0f3501a31ea9cfd330885b10fa"
+  dependencies:
+    "@types/node" "*"
+
+"@types/bs58@^3.0.30":
+  version "3.0.30"
+  resolved "https://registry.yarnpkg.com/@types/bs58/-/bs58-3.0.30.tgz#916ba10992465e56f81afc735e7935fd749893e1"
+  dependencies:
+    "@types/base-x" "*"
+
+"@types/crypto-js@^3.1.43":
+  version "3.1.43"
+  resolved "https://registry.yarnpkg.com/@types/crypto-js/-/crypto-js-3.1.43.tgz#b859347d6289ba13e347c335a4c9efa63337a748"
+
+"@types/loglevel@^1.5.3":
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/@types/loglevel/-/loglevel-1.5.3.tgz#adfce55383edc5998a2170ad581b3e23d6adb5b8"
+
 "@types/node@*":
   version "10.3.3"
   resolved "https://registry.npmjs.org/@types/node/-/node-10.3.3.tgz#8798d9e39af2fa604f715ee6a6b19796528e46c3"
+
+"@types/node@^10.5.4":
+  version "10.9.4"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.9.4.tgz#0f4cb2dc7c1de6096055357f70179043c33e9897"
 
 "@types/node@^8.0.24":
   version "8.10.20"
@@ -1420,11 +1469,7 @@ big.js@^3.1.3:
   version "3.2.0"
   resolved "https://registry.npmjs.org/big.js/-/big.js-3.2.0.tgz#a5fc298b81b9e0dca2e458824784b65c52ba588e"
 
-bignumber.js@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.npmjs.org/bignumber.js/-/bignumber.js-5.0.0.tgz#fbce63f09776b3000a83185badcde525daf34833"
-
-bignumber.js@7.2.1:
+bignumber.js@7.2.1, bignumber.js@^7.2.1:
   version "7.2.1"
   resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-7.2.1.tgz#80c048759d826800807c4bfd521e50edbba57a5f"
 
@@ -1643,12 +1688,20 @@ bs58@^4.0.0, bs58@^4.0.1:
   dependencies:
     base-x "^3.0.2"
 
-bs58check@<3.0.0, bs58check@^2.1.1:
+bs58check@<3.0.0:
   version "2.1.1"
   resolved "https://registry.npmjs.org/bs58check/-/bs58check-2.1.1.tgz#8a5d0e587af97b784bf9cbf1b29f454d82bc0222"
   dependencies:
     bs58 "^4.0.0"
     create-hash "^1.1.0"
+
+bs58check@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/bs58check/-/bs58check-2.1.2.tgz#53b018291228d82a5aa08e7d796fdafda54aebfc"
+  dependencies:
+    bs58 "^4.0.0"
+    create-hash "^1.1.0"
+    safe-buffer "^5.1.2"
 
 bser@^2.0.0:
   version "2.0.0"
@@ -3420,9 +3473,9 @@ enzyme-adapter-utils@^1.6.0:
     object.assign "^4.1.0"
     prop-types "^15.6.2"
 
-enzyme@3.5.0:
-  version "3.5.0"
-  resolved "https://registry.npmjs.org/enzyme/-/enzyme-3.5.0.tgz#fd452a698fd1352c737b641dd3a64e079f42d9d5"
+enzyme@3.5.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.5.1.tgz#aad0cbd005fee4cfd800b6451b64112b5374da67"
   dependencies:
     array.prototype.flat "^1.2.1"
     cheerio "^1.0.0-rc.2"
@@ -3442,6 +3495,7 @@ enzyme@3.5.0:
     object.values "^1.0.4"
     raf "^3.4.0"
     rst-selector-parser "^2.2.3"
+    string.prototype.trim "^1.1.2"
 
 errno@^0.1.3, errno@~0.1.7:
   version "0.1.7"
@@ -3461,7 +3515,7 @@ error-ex@^1.3.1:
   dependencies:
     is-arrayish "^0.2.1"
 
-es-abstract@^1.10.0, es-abstract@^1.4.3, es-abstract@^1.5.1, es-abstract@^1.6.1, es-abstract@^1.7.0:
+es-abstract@^1.10.0, es-abstract@^1.4.3, es-abstract@^1.5.0, es-abstract@^1.5.1, es-abstract@^1.6.1, es-abstract@^1.7.0:
   version "1.12.0"
   resolved "https://registry.npmjs.org/es-abstract/-/es-abstract-1.12.0.tgz#9dbbdd27c6856f0001421ca18782d786bf8a6165"
   dependencies:
@@ -4383,10 +4437,6 @@ gaze@^1.0.0:
   resolved "https://registry.npmjs.org/gaze/-/gaze-1.1.3.tgz#c441733e13b927ac8c0ff0b4c3b033f28812924a"
   dependencies:
     globule "^1.0.0"
-
-generic-pool@~2.0.4:
-  version "2.0.4"
-  resolved "https://registry.npmjs.org/generic-pool/-/generic-pool-2.0.4.tgz#f9718deda82fa125ed5c43e341c9a215a766d9a3"
 
 get-caller-file@^1.0.1:
   version "1.0.2"
@@ -5890,12 +5940,6 @@ js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.4.5"
   resolved "https://registry.npmjs.org/js-base64/-/js-base64-2.4.5.tgz#e293cd3c7c82f070d700fc7a1ca0a2e69f101f92"
 
-js-scrypt@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/js-scrypt/-/js-scrypt-0.2.0.tgz#7a62b701b4616e70ad0cde544627aabb99d7fe39"
-  dependencies:
-    generic-pool "~2.0.4"
-
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.npmjs.org/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
@@ -6285,9 +6329,9 @@ log-symbols@^2.0.0, log-symbols@^2.1.0:
   dependencies:
     chalk "^2.0.1"
 
-loglevel-plugin-prefix@^0.8.3:
-  version "0.8.3"
-  resolved "https://registry.npmjs.org/loglevel-plugin-prefix/-/loglevel-plugin-prefix-0.8.3.tgz#3e46ee114f92ead1e1761100209349bda695995b"
+loglevel-plugin-prefix@^0.8.4:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/loglevel-plugin-prefix/-/loglevel-plugin-prefix-0.8.4.tgz#2fe0e05f1a820317d98d8c123e634c1bd84ff644"
 
 loglevel@^1.4.1, loglevel@^1.6.1:
   version "1.6.1"
@@ -9853,6 +9897,14 @@ string.prototype.padend@^3.0.0:
   dependencies:
     define-properties "^1.1.2"
     es-abstract "^1.4.3"
+    function-bind "^1.0.2"
+
+string.prototype.trim@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/string.prototype.trim/-/string.prototype.trim-1.1.2.tgz#d04de2c89e137f4d7d206f086b5ed2fae6be8cea"
+  dependencies:
+    define-properties "^1.1.2"
+    es-abstract "^1.5.0"
     function-bind "^1.0.2"
 
 string_decoder@^1.0.0, string_decoder@~1.1.1:
