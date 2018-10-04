@@ -231,14 +231,16 @@
     humps "^2.0.1"
     prop-types "^15.5.10"
 
-"@ledgerhq/hw-transport-node-hid@4.18.0":
-  version "4.18.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-node-hid/-/hw-transport-node-hid-4.18.0.tgz#39ab0f9300c755f6b33f28dda22e30677882b6be"
+"@ledgerhq/hw-transport-node-hid@4.23.0":
+  version "4.23.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-node-hid/-/hw-transport-node-hid-4.23.0.tgz#c3b89976cefc882766f404a97b7774f7f3bb325a"
   dependencies:
-    "@ledgerhq/hw-transport" "^4.15.0"
+    "@ledgerhq/hw-transport" "^4.21.0"
+    lodash "^4.17.11"
     node-hid "^0.7.2"
+    usb "^1.3.3"
 
-"@ledgerhq/hw-transport@^4.15.0":
+"@ledgerhq/hw-transport@^4.21.0":
   version "4.21.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport/-/hw-transport-4.21.0.tgz#50f85cfe115ba3f9d5bf94755c701e927175794f"
   dependencies:
@@ -6363,7 +6365,7 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.npmjs.org/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@4.17.11:
+lodash@4.17.11, lodash@^4.17.11:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
@@ -6802,6 +6804,10 @@ mute-stream@0.0.7:
 nan@^2.10.0, nan@^2.6.2, nan@^2.9.2:
   version "2.10.0"
   resolved "https://registry.npmjs.org/nan/-/nan-2.10.0.tgz#96d0cd610ebd58d4b4de9cc0c6828cda99c7548f"
+
+nan@^2.8.0:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.11.1.tgz#90e22bccb8ca57ea4cd37cc83d3819b52eea6766"
 
 nanomatch@^1.2.9:
   version "1.2.9"
@@ -10896,6 +10902,13 @@ url@^0.11.0:
 urlgrey@^0.4.4:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/urlgrey/-/urlgrey-0.4.4.tgz#892fe95960805e85519f1cd4389f2cb4cbb7652f"
+
+usb@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/usb/-/usb-1.3.3.tgz#4e8a4b44ab8833fa1c4fb99778ebae1d2d626970"
+  dependencies:
+    nan "^2.8.0"
+    node-pre-gyp "^0.10.0"
 
 use@^3.1.0:
   version "3.1.0"
